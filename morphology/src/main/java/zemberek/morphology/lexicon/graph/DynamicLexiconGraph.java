@@ -15,7 +15,7 @@ import zemberek.core.turkish.PhoneticExpectation;
 
 import java.util.*;
 
-public class DynamicLexiconGraph {
+public class DynamicLexiconGraph implements java.io.Serializable{
 
     private Map<SuffixSurfaceNode, SuffixSurfaceNode> rootSuffixNodeMap = Maps.newHashMap();
     Set<StemNode> stemNodes = Sets.newHashSet();
