@@ -14,7 +14,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
 
-public class SimpleGenerator {
+public class SimpleGenerator implements java.io.Serializable {
 
     DynamicLexiconGraph graph;
     ArrayListMultimap<DictionaryItem, StemNode> multiStems = ArrayListMultimap.create(1000, 2);
