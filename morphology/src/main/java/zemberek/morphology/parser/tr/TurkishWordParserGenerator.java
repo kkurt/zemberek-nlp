@@ -35,7 +35,7 @@ import java.util.stream.Collectors;
 /**
  * Turkish Morphological Parser finds all possible parses for a Turkish word.
  */
-public class TurkishWordParserGenerator extends BaseParser {
+public class TurkishWordParserGenerator extends BaseParser implements java.io.Serializable {
 
     private MorphParser parser;
     private SimpleGenerator generator;
@@ -118,7 +118,7 @@ public class TurkishWordParserGenerator extends BaseParser {
         }
     }
 
-    private class MorphParseCacheLoader extends CacheLoader<String, List<MorphParse>> {
+    private class MorphParseCacheLoader extends CacheLoader<String, List<MorphParse>> implements java.io.Serializable {
         @Override
         public List<MorphParse> load(String word) throws Exception {
             String s = normalize(word); // TODO: this may cause problem for some foreign words.
